@@ -1,5 +1,6 @@
 //app.js
 App({
+  
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
@@ -34,6 +35,9 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    style_cooking: [
+      "川","湘","鲁","粤","苏","闵","浙","徽"
+    ]
   }
 })

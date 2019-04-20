@@ -1,0 +1,11 @@
+<view class="mysearch">
+    <van-search
+        background="#E8EAED"
+        value="{{ value }}"
+        placeholder="菜品"
+        use-action-slot
+        bind:search="onSearch"
+    >
+  <view slot="action"  bind:tap="onSearch">取消</view>
+</van-search>
+</view>

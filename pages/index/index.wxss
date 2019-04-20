@@ -1,21 +1,124 @@
 /**index.wxss**/
-.userinfo {
+.head{ 
+  width: 100%;
+  height: 400rpx;
+  background-color: #FFD700;
+  position: relative;
+}
+.head image{
+    width:100%;
+    height: 100%;
+}
+.head-text{
+  width: 100%;
+  height: 60rpx;
+  position: absolute;
+  top: 35%;
+  left: 0;
+  color: #FFFFF0 ;
+  font-weight: 600;
+  font-size: 50rpx;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.hengyang{
+  top: 48%;
+}
+.page-top{
+  position: absolute;
+  left: 15rpx;
+  top: 15rpx;
+  width: 80rpx;
+  height: 80rpx;
+  background: rgba(250,250,250, 0.4);
+}
+.scan{
+  position: absolute;
+  right: 15rpx;
+  top: 15rpx;
+  width: 80rpx;
+  height: 80rpx;
+  background: rgba(250,250,250, 0.4);
+}
+.head-function{
+  width: 100%;
+  height: 70rpx;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+}
+.search{
+  width: 80%;
+  height: 50rpx;
+  border-radius: 50rpx;
+  background: rgba(250, 250, 250, 0.6);
+  font-size: 31rpx;
+}
+.search image{
+   width: 30rpx;
+   height: 30rpx;
+}
+.loadInfo{
+  margin-left: 30rpx;
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 35px;
+  background: rgba(250,250,250, 0.6);
+}
+.loadInfo image{
+  width: 80%;
+  height: 80%;
+}
+.choose{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  margin-bottom: 80rpx;
+}
+.choose1{
+  display: flex;
+  font-size: 31rpx;
+  flex: 5;
+  height: 40rpx;
+  width: 20rpx;
+  margin:20rpx 60rpx;
+  border-radius: 5rpx;
+  box-shadow: 0 0rpx 0rpx 1rpx #F0E68C;
+  /*for Android*/
+  -webkit-box-shadow: 0px 1px 1px 1px #F0E68C;
+  /*for IOS*/
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.product{
+  width: 100%;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.product-item{
+  position: relative;
+  width: 100%;
+  height: 450rpx;
+  color: #ffffff; 
+  border-bottom: solid #C2C2C2 1px;	
 }
-
-.usermotto {
-  margin-top: 200px;
+.product_item_photo{
+  width:100%;
+  height: 80%;
+}
+.product_item_average{
+  color: #424242;
+  position: absolute;
+  bottom: 25rpx;
+  left: 50rpx;
+}
+.product_item_chefphoto{
+  position: relative;
+  bottom: 100rpx;
+  left: 40%;
+  width:150rpx;
+  height: 150rpx;
+  border-radius: 75px;
+  border: solid #ADFF2F 1px;
+}
+.product_item_skill{
+color: #424242;
+  position: absolute;
+  bottom: 25rpx;
+  right: 50rpx;
 }

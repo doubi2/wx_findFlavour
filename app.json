@@ -1,6 +1,11 @@
 {
   "pages":[
+    "pages/shopping/shopping",
     "pages/index/index",
+    "pages/doortodoor/doortodoor",
+    "pages/chat/chat",
+    "pages/myinfo/myinfo",
+    "pages/search/search",
     "pages/logs/logs"
   ],
   "window":{
@@ -8,5 +13,42 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "寻味",
     "navigationBarTextStyle":"black"
-  }
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#EE7621",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+        {
+            "pagePath": "pages/index/index",
+            "text": "首页",
+            "iconPath": "icons/homepage.png",
+            "selectedIconPath": "icons/homepage_over.png"
+        },
+        {
+            "pagePath": "pages/doortodoor/doortodoor",
+            "text": "上门",
+            "iconPath": "icons/door_to_door.png",
+            "selectedIconPath": "icons/door_to_door_over.png"
+        },
+        {
+            "pagePath": "pages/chat/chat",
+            "text": "食客聊",
+            "iconPath": "icons/chat.png",
+            "selectedIconPath": "icons/chat_over.png"
+        },
+        {
+            "pagePath": "pages/myinfo/myinfo",
+            "text": "我的",
+            "iconPath": "icons/my.png",
+            "selectedIconPath": "icons/my_over.png"
+        }
+    ]
+},
+"permission": {
+    "scope.userLocation": {
+        "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+}
 }

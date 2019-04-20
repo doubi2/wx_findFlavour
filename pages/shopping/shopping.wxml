@@ -1,0 +1,67 @@
+<view >
+    <view class="headimage">
+        <image mode="scaleToFill" src="../../images/6.jpg" />
+    </view>
+    <view class="headcontent ">
+        <view class="content_info">
+            <view>
+                <navigator class="record">食安记录<image mode="scaleToFill" src="../../icons/triangle.png" /></navigator>
+                <view class="info_center">
+                    <view class="photo"><image mode="scaleToFill"  src="../../images/chef_1.jpg"></image></view>
+                    <view class="stars setcenter">
+                        <van-rate
+                            value="4"
+                            color="#FF0000"
+                            readonly="true"
+                            void-color="#FF0000"
+                            size="{{12}}"
+                            />
+                        <text>四颗星</text>
+                    </view>
+                    <text class='kitchen'>大叔的厨房</text>
+                    <view class="location">
+                        <view >
+                            <image mode="scaleToFill" src="../../icons/location.png"> </image>
+                            <text>武汉市武昌区徐东朗苑  327米 </text>
+                        </view>
+                        <view>湖北  武汉人</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="intr">
+            <view class="intr_logo setcenter">
+                <image src="../../icons/reallyID.png" />
+                <view>健康认证</view>
+            </view>
+            <view class="intr_logo setcenter">
+                <image src="../../icons/reallyID.png" />
+                <view>上门认证</view>
+            </view>
+            <view class="intr_logo setcenter">
+                <image src="../../icons/reallyID.png" />
+                <view>实名认证</view>
+            </view>
+        </view>
+        <view class="serve">
+            <view>可外送</view>
+            <view>上门服务</view>
+            <view>自取</view>
+        </view>
+    </view>
+    <view class="diy">
+        <view>私人定制</view>
+        <view>接受定制</view>
+        <view>请说明要求</view>
+    </view>
+    <view class="menu">
+        <van-tabs animated sticky color="#FF4444">
+            <van-tab title="今天菜品">内容 1</van-tab>
+            <van-tab title="明日菜品">内容 2</van-tab>
+            <van-tab title="评价（99+）">内容 3</van-tab>
+        </van-tabs>
+    </view>
+    <view class="shoppingbasket" style="height:2000rpx;">
+    </view>
+</view>
+  

@@ -7,7 +7,33 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    style_cooking: [
+        "川", "湘", "鲁", "粤", "苏", "闵", "浙", "徽"
+    ],
+    chefs: [
+      {
+        id: 0,
+        photo: "../../images/9.jpg",
+        average: 15,
+        chefphoto: "../../images/chef_1.jpg",
+        skill: "川"
+      },
+      {
+        id: 1,
+        photo: "../../images/9.jpg",
+        average: 15,
+        chefphoto: "../../images/chef_1.jpg",
+        skill: "湘"
+      },
+      {
+        id: 2,
+        photo: "../../images/9.jpg",
+        average: 15,
+        chefphoto: "../../images/chef_1.jpg",
+        skill: "鲁"
+      }
+    ]
   },
   //事件处理函数
   bindViewTap: function() {
@@ -50,5 +76,30 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  }
+  },
+  scan() {
+    wx.scanCode({
+      success: (res) => {
+        console.log("扫码结果");
+        console.log(res);
+        this.setData({
+          img: res.result
+        })
+      },
+      fail: (res) => {
+        console.log(res);
+      }
+    })
+  },
+  //获取当前位置的经纬度
+  loadInfo: function(){
+  wx.getLocation({
+    type: 'gcj02', //返回可以用于wx.openLocation的经纬度
+    success: function (res) {
+      var latitude = res.latitude//维度
+      var longitude = res.longitude//经度
+      console.log(res);
+    }
+  })
+},
 })

@@ -1,0 +1,4 @@
+.mysearch{
+    height: 100rpx;
+    widows: 100%;
+}
