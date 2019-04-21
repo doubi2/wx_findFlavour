@@ -1,4 +1,6 @@
-/**app.wxss**/
+@import 'weui.wxss';
+@import 'common.wxss';
+@import 'test.wxss';
 page,.page {
   height: 100%;
   font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
@@ -23,3 +25,25 @@ page,.page {
   align-items: center;
   justify-content: center;
 }
+.bc_red{
+  background-color: #FB4C22;
+}
+.bc_white{
+   background-color: #ffffff;
+}
+.bc_gray{
+  background-color: #E8E8E8;
+}
+.new_padd{
+  padding: 0rpx 30rpx 15rpx 30rpx;
+}
+.color_white{
+  color: #fff;
+}
+.bg_white{
+  color:#ffffff;
+}
+.color_gray{
+    color: #9C9C9C;
+}
+

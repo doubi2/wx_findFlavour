@@ -1,9 +1,9 @@
 {
   "pages":[
-    "pages/shopping/shopping",
-    "pages/index/index",
     "pages/doortodoor/doortodoor",
     "pages/chat/chat",
+    "pages/index/index",
+    "pages/shopping/shopping",
     "pages/myinfo/myinfo",
     "pages/search/search",
     "pages/logs/logs"

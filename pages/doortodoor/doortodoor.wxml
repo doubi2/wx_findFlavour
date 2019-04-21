@@ -1,2 +1,52 @@
-<!--pages/doortodoor/doortodoor.wxml-->
-<text>pages/doortodoor/doortodoor.wxml</text>
+<view class="doortodoor bc_gray">
+    <view class="options bc_white">
+        <view class="option">
+            <view class="day-top-info">
+                <navigator class="font day-top-time" target="" url="" hover-class="none" open-type="navigate">
+                    <view >日期</view>
+                    <image src="../../icons/drop_downbox.png"></image >
+                </navigator>
+                <view class="divLine"></view>
+                <navigator class="font day-top-time day-top-address" target="" url="" hover-class="none" open-type="navigate">
+                    <view >地点</view>
+                    <image src="../../icons/drop_downbox.png"></image >
+                </navigator> 
+                <view class="divLine"></view>
+                <navigator class="font day-top-time day-top-price" target="" url="" hover-class="none" open-type="navigate">
+                    <view >价位</view>
+                    <image src="../../icons/drop_downbox.png"></image >
+                </navigator> 
+            </view>
+        </view>
+    </view>
+    <view class="chefs">
+        <navigator class="chef-wrap"  wx:for="{{product}}" wx:key="{{index}}"  hover-class="none" open-type="navigate">
+        <view class="chef-item bc_white">
+            <image class='chef_cookingphoto' mode="scaleToFill" src="{{item.cookingphoto}}" />
+            <view class="chef_name">
+                <image  mode="scaleToFill" src="{{item.chefphoto}}" />
+                <view >{{item.chefname}}</view>
+            </view>
+            <view class="chef_item_skill chef_font ">
+                <view class="item_first"><text class="color_gray">擅长：</text>{{item.skill}}</view>
+                <view class="item_last"><text class="color_gray">地址：</text>{{item.adderss}}</view>
+            </view>
+            <view class="chef_evaluate chef_font">
+                <view class="item_first">
+                    <view class="color_gray">好评：</view>
+                    <van-rate
+                        value="{{item.evaluate}}"
+                        color="#FF0000"
+                        readonly="true"
+                        void-color="#FF0000"
+                        size="{{19}}"
+                    />
+                </view>
+                <view class="item_last"><text class="color_gray">距离：</text>{{item.distance}}km</view>
+            </view>
+            
+        </view>
+      </navigator>
+    </view>
+</view>
+  

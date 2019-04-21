@@ -22,7 +22,7 @@ page{
     top: -170rpx;
     background-color: #fff;
     width: 90%;
-    height: 340rpx;
+    height: 350rpx;
     margin: 0 5%;
     border-radius: 10rpx;
     color: #9C9C9C;
@@ -71,7 +71,7 @@ page{
     display: flex;
 }
 .kitchen{
-    margin: 10rpx 0;
+    margin: 8rpx 0;
     font-size: 45rpx;
     color: #515151;
 }
@@ -122,13 +122,12 @@ page{
     align-items: center;
 }
 .serve view{
-    color: #515151;
     margin: 0 20rpx;
-    font-size: 28rpx;
+    font-size: 25rpx;
 }
 .diy{
     width: 100%;
-    height: 100rpx;
+    height: 120rpx;
     margin: 30rpx 0;
     background-color: #fff;
     display: flex;
@@ -138,18 +137,41 @@ page{
 }
 .diy view{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    
     font-size: 31rpx;
 }
-.diy :first-child{
+.diy>view:first-child{
+    display: flex;
+    flex: 2;
+    justify-content: space-around;
+    align-items: center;
     color: #fff;
     height: 60rpx;
     width: 180rpx;
     background-color: #FF4040;
     border-radius: 10rpx;
     font-size: 35rpx;
+    margin: 0 70rpx;
 }
-.diy :nth-child(2){
-
+.custom-made{
+    display: flex;
+    flex: 6;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.custom-made view{
+    display: flex;
+    justify-content: flex-start;
+    margin: 5rpx 0;
+}
+.custom-made view:first-child{
+    font-size: 29rpx;
+}
+.custom-made view:nth-child(2){
+    font-size: 22rpx;
+}
+.todayfood{
+    width: 100%;
+    height: 2000rpx;
+    margin-top: 10rpx;
 }

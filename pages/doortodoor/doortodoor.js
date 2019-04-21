@@ -10,7 +10,7 @@ Page({
               cookingphoto: "../../images/10.jpg",
               chefname: "周文凯",
               chefphoto: "../../images/chef_1.jpg",
-                skill: "湘",
+              skill: "湘 本帮菜 川菜",
               adderss: "杨浦区",
               evaluate: 5,
               distance: 213.82

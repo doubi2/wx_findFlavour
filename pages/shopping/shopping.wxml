@@ -43,7 +43,7 @@
                 <view>实名认证</view>
             </view>
         </view>
-        <view class="serve">
+        <view class="serve color_gray">
             <view>可外送</view>
             <view>上门服务</view>
             <view>自取</view>
@@ -51,14 +51,97 @@
     </view>
     <view class="diy">
         <view>私人定制</view>
-        <view>接受定制</view>
-        <view>请说明要求</view>
+        <view class="custom-made">
+            <view>想吃什么，可以定制哦</view>
+            <view class="color_gray">家厨接受定制，请说明要求</view>
+        </view>
+       
     </view>
     <view class="menu">
         <van-tabs animated sticky color="#FF4444">
-            <van-tab title="今天菜品">内容 1</van-tab>
-            <van-tab title="明日菜品">内容 2</van-tab>
-            <van-tab title="评价（99+）">内容 3</van-tab>
+            <van-tab title="今天菜品">
+            <view class='todayfood'>
+                <!--tab  -->
+                <view class="weui-tab">
+                
+                    <view class="weui-tab__panel">
+                    <!--今日菜单  -->
+                    <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                        <!--左侧栏  -->
+                        <scroll-view scroll-y class="left-cont">
+                        <block class="caixi" wx:key="id" wx:for="{{menu_list}}">
+                            <view class="classify  {{curNav == item.id ? 'active' : ''}}" bindtap="changeRightMenu" data-id="{{item.id}}">{{item.name}}</view>
+                        </block>
+                        </scroll-view>
+                        <!--右侧栏  -->
+                        <scroll-view scroll-y class="right-cont">
+                        <block wx:for="{{foodList}}" wx:key="">
+                            <view class="weui-panel__bd mb_bottom">
+                            <view class=" weui-media-box_appmsg bc_white mT" hover-class="none">
+                                <view class="weui-media-box__hd  img_box ">
+                                <!--图片链接  -->
+                                    <image class="weui-media-box__thumb img_box" src="../../images/1.jpg" />  
+                                </view>
+                                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                                <view class="cai_title" data-index="{{index}}">{{item.name}}</view>
+                                <view class="cai_desc" wx:if="{{item.note == ''}}">暂无介绍</view>
+                                <view class="cai_desc" wx:else>{{item.note}}</view> 
+                                <view class="cai_desc"> 销量：{{item.sales}} </view>
+                                <view class="price-stepper">
+                                    <view class="cai_price"  data-index="{{index}}">{{item.price}}</view>
+                                    <view class="stepper">
+                                    <!-- 减号 -->
+                                    <view class="iconfont icon-minus2 fontP" hidden="{{item.quantity<=0}}" bindtap="minusCount"  data-id="{{item.id}}"  data-index="{{index}}"></view>
+                                    <!-- 数量 -->
+                                    <view class="value" hidden="{{item.quantity<=0}}" data-id="{{item.id}}"   data-num="{{item.quantity}}">{{item.quantity}}</view>
+                                    <!-- 加号 -->
+                                    <view class="iconfont icon-plus1 fontP" data-id="{{item.id}}" data-index="{{index}}" bindtap="addCount"></view>
+                                    </view>
+                                </view>
+                                </view>
+                            </view>
+                            </view>
+                        </block>
+                        </scroll-view>
+                        <!--底部  -->
+                        <view class="bottom_box">
+                        <view class="shop_cartBox" bindtap="cascadeToggle">
+                            <image class="shopCart_img" src="../../images/shopCart.png"></image>
+                        </view>
+                        <view class="all_money">总计：{{totalPrice}}元，{{totalNum}}件</view>
+                        <view class="choose_ok color-block" bindtap="gotoOrder">下单</view>
+                        </view>
+                    </view>
+                    
+                    </view>
+                </view>
+                <!--购物车弹窗  -->
+                <view hidden="{{maskFlag}}" class="modal-mask" bindtap="cascadeToggle"></view>
+                <view animation="{{animationData}}"  class="cart_popup">
+
+                    <view class="shopcart_title"><span class="shopcart_close" bindtap="cascadeToggle">返回</span>购物车<span class="shopcart_deleteAll" bindtap="cleanList">清空购物车</span></view>
+                    <scroll-view scroll-y  style="height:250px;margin-top:35px">
+                    <block wx:for="{{cartList}}" wx:key="" >
+                    <view class="cart_cells" wx:if="{{item.quantity > 0}}">
+                        <view class="cells_name"  data-index="{{index}}">{{item.name}}</view>
+                        <view class="cells_price"  data-index="{{index}}">{{item.price}}</view>
+                        <view class="price-box">
+                        <!-- 减号 -->
+                        <view class="iconfont icon-minus2 fontP" hidden="{{item.quantity<=0}}"  data-index="{{index}}" data-id="{{item.id}}"  bindtap="minusCount"></view>
+                        <!-- 数量 -->
+                        <view class="value" style="color:#ff9600;margin-top:8rpx" hidden="{{item.quantity<=0}}" data-id="{{item.id}}">{{item.quantity}}</view>
+                        <!-- 加号 -->
+                        <view class="iconfont icon-plus1  fontP" bindtap="addCount" data-id="{{item.id}}" data-index="{{index}}"></view>
+                        </view>
+                        <icon class="shopcart_delete" type="clear" size="18"  data-index="{{index}}" data-id="{{item.id}}" bindtap="deleteOne" />
+                    </view>
+                    </block>
+                    </scroll-view>
+                </view>
+            </view>
+            </van-tab>
+            <van-tab title="明日菜品">今日菜品</van-tab>
+            <van-tab title="评价（99+）">好评</van-tab>
         </van-tabs>
     </view>
     <view class="shoppingbasket" style="height:2000rpx;">
