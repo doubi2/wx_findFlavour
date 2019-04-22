@@ -1,9 +1,10 @@
 //index.js
 //获取应用实例
-const app = getApp()
+const app = getApp();
 
 Page({
   data: {
+      open:false,
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
@@ -35,6 +36,17 @@ Page({
       }
     ]
   },
+  tap_ch: function(e) {
+        if (this.data.open) {
+            this.setData({
+                open: false
+            });
+        } else {
+            this.setData({
+                open: true
+            });
+        }
+    },
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
@@ -100,6 +112,6 @@ Page({
       var longitude = res.longitude//经度
       console.log(res);
     }
-  })
-},
+  });
+  }
 })

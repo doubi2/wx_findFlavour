@@ -27,7 +27,6 @@ Page({
             feed:feed_data,
             feed_length: feed_data.length
           });
-        console.log(feed_data);
     },
 
     /**

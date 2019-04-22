@@ -1,41 +1,52 @@
 <!--index.wxml-->
 <view class="container">
-    <view class="head">
-      <image mode="scaleToFill" src="../../images/14.jpg" ></image>
-      <view class='head-text setcenter'><text>欢迎来到</text></view>
-      <view class='head-text setcenter hengyang'><text>衡阳</text></view>
-      <view class="page-top {{open ? 'c-state1' : ''}}">
-        <image bindtap="tap_ch" src="../../icons/menubar.png"></image>
+    <view class="page-bottom">
+        <view class="page-content">
+          <block wx:for="{{style_cooking}}" wx:key="index">
+            <view  class="wc">
+                <text>{{item}}</text>
+            </view>
+          </block>
+        </view>
+    </view>
+    <view class="main bc_white {{open ? 'c-state1' : ''}}">
+      <view class="head">
+        <image mode="scaleToFill" src="../../images/14.jpg" ></image>
+        <view class='head-text setcenter'><text>欢迎来到</text></view>
+        <view class='head-text setcenter hengyang'><text>衡阳</text></view>
+        <view class="page-top">
+          <image bindtap="tap_ch" src="../../icons/menubar.png"></image>
+        </view>
+        <view class="scan">
+          <image bindtap="scan" src="../../icons/scan.png"></image>
+        </view>
+        <view class="head-function setcenter">
+          <navigator class='search setcenter' url="../search/search" open-type="navigate" hover-class="none">
+          <image src="../../icons/search.png" />搜索
+          </navigator>
+          <view class="loadInfo setcenter" >
+            <image bindtap="loadInfo" src="../../icons/map.png"/>
+          </view>
+        </view>
       </view>
-      <view class="scan">
-        <image bindtap="scan" src="../../icons/scan.png"></image>
+      <view class="choose" hover-class="none">
+        <view class="choose1 setcenter">
+          <text>可上门做饭</text>
+        </view>
+        <view class="choose1 choose2 setcenter">
+          <text>筛选日期</text>
+        </view>
       </view>
-      <view class="head-function setcenter">
-        <navigator class='search setcenter' url="../search/search" open-type="navigate" hover-class="none">
-         <image src="../../icons/search.png" />搜索
+        
+      <view class="product">
+        <navigator class="product-wrap" url="../shopping/shopping?id={{item.id}}" wx:for="{{chefs}}" wx:key="{{index}}"  hover-class="none" open-type="navigate">
+          <view class="product-item">
+              <image class='product_item_photo' mode="scaleToFill" src="{{item.photo}}" />
+              <view class='font product_item_average'>人均：{{item.average}}/元</view>
+              <image class="product_item_chefphoto" src="{{item.chefphoto}}"/>
+              <view class='font product_item_skill'>菜系：{{item.skill}}</view>
+          </view>
         </navigator>
-        <view class="loadInfo setcenter" >
-          <image bindtap="loadInfo" src="../../icons/map.png"/>
-        </view>
       </view>
-    </view>
-    <view class="choose" hover-class="none">
-      <view class="choose1 setcenter">
-        <text>可上门做饭</text>
-      </view>
-      <view class="choose1 choose2 setcenter">
-        <text>筛选日期</text>
-      </view>
-    </view>
-      
-    <view class="product">
-      <navigator class="product-wrap" url="../shopping/shopping?id={{item.id}}" wx:for="{{chefs}}" wx:key="{{index}}"  hover-class="none" open-type="navigate">
-        <view class="product-item">
-            <image class='product_item_photo' mode="scaleToFill" src="{{item.photo}}" />
-            <view class='font product_item_average'>人均：{{item.average}}/元</view>
-            <image class="product_item_chefphoto" src="{{item.chefphoto}}"/>
-            <view class='font product_item_skill'>菜系：{{item.skill}}</view>
-        </view>
-      </navigator>
     </view>
 </view>

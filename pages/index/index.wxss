@@ -1,4 +1,11 @@
 /**index.wxss**/
+.main{
+  width: 100%;
+  height: 3000rpx;
+  transition: All 0.2s ease; 
+  -webkit-transition: All 0.4s ease;
+  z-index: 0;
+}
 .head{ 
   width: 100%;
   height: 400rpx;
@@ -71,7 +78,7 @@
 .choose{
   display: flex;
   width: 100%;
-  margin-bottom: 80rpx;
+  margin: 20rpx 0;
 }
 .choose1{
   display: flex;
@@ -117,8 +124,47 @@
   border: solid #ADFF2F 1px;
 }
 .product_item_skill{
-color: #424242;
+  color: #424242;
   position: absolute;
   bottom: 25rpx;
   right: 50rpx;
+}
+.page-bottom{
+  height: 100%;
+  width: 750rpx;
+  position: fixed; 
+  z-index: 0;
+  background-color:#B8B8B8;
+}
+.wc{
+  color: white;
+  padding: 20rpx 0 20rpx 90rpx;
+    font-size: 40rpx;
+}
+.page-content{
+  padding-top: 100rpx;
+}
+/* .page-top{
+  height: 100%;
+  width: 750rpx;
+  z-index: 0;
+  transition: All 0.2s ease; 
+  -webkit-transition: All 0.4s ease;
+}
+.page-top image{
+  position: absolute;
+  width: 68rpx;
+  height: 38rpx;
+  left: 20rpx;
+  top: 20rpx;
+} */
+.c-state1{
+  transform: rotate(0deg) scale(1) translate(30%,0%); 
+  -webkit-transform: rotate(0deg) scale(1) translate(30%,0%); 
+  /* background-color: #B8B8B8; */
+  opacity:0.7;
+}
+.c-state2{
+  transform: rotate(0deg) scale(.8) translate(30%,0%); 
+  -webkit-transform: rotate(0deg) scale(.8) translate(30%,0%); 
 }

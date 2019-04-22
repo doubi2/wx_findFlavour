@@ -44,7 +44,6 @@
                 </view>
                 <view class="item_last"><text class="color_gray">距离：</text>{{item.distance}}km</view>
             </view>
-            
         </view>
       </navigator>
     </view>

@@ -1,16 +1,16 @@
 {
   "pages":[
+    "pages/index/index",
+    "pages/myinfo/myinfo",
     "pages/doortodoor/doortodoor",
     "pages/chat/chat",
-    "pages/index/index",
     "pages/shopping/shopping",
-    "pages/myinfo/myinfo",
     "pages/search/search",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#FF8C00",
     "navigationBarTitleText": "寻味",
     "navigationBarTextStyle":"black"
   },
