@@ -27,7 +27,7 @@
     width: 110rpx;
     height: 110rpx;
     border-radius: 55rpx;
-    margin-left: 50rpx;
+    margin-left: 80rpx;
 }
 .login view{
     margin-left: 50rpx;
@@ -38,11 +38,10 @@
     justify-content:center;
     align-items: flex-start;
 }  
-.functions view{
+.functions>view{
     margin-top: 28rpx;
-    margin-left:  50rpx;
-    height: 80rpx;
-    width: 100%;
+    margin-left: 10%;
+    width: 90%;
     border-bottom: solid 1px #ebebeb;
 }
 .vip{
@@ -55,8 +54,8 @@
 .vip view{
     margin: 0;
 }
-.vip :nth-of-type(1){
-    flex: 4;
+.function{
+    padding-bottom: 23rpx;
 }
 .adder{
     margin-top: 10rpx;
@@ -64,29 +63,44 @@
     display: flex;
     flex-direction: row;
     font-size: 30rpx;
-    align-content: center;
-    justify-content: center;
+    padding-left: 150rpx;
+    padding-bottom: 21rpx;
 }
 .adder :first-child{
-    flex: 5;
+    width:50rpx;
+    height: 50rpx;
+    margin-right: 10rpx;
 }
-.adder :last-child{
-    flex:6;
-}
-.state{
-    flex: 6;
+.states{
     display: flex;
     flex-direction: row;
     font-size: 30rpx;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 8rpx;
 }
-
-.order{
+.states>view{
     display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rpx;
+}
+.states>view>view{
+    padding-top: 10rpx;
+}
+.order{
+    height: 185rpx;
     flex-direction: row; 
+    padding-bottom: 0;
 }
 .order view{
     margin: 0;
 }
 .order :nth-of-type(1){
     flex:4;
+}
+.state image{
+    width: 50rpx;
+    height: 50rpx;
 }

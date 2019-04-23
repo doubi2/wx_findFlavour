@@ -8,18 +8,27 @@
   </view>
   <view class="functions function bc_white">
     <view class="vip">
-      <view >我的会员</view>
+      <view style="margin-bottom:20rpx;">我的会员</view>
       <view class="adder">
+        <image src="../../icons/discount.png" />
         <view>优惠券</view>
-        <view>地址</view>
       </view>
     </view>
     <view class="order function">
       <view>我的订单</view>
-      <view class="state">
-        <view style='flex :3'>已完成</view>
-        <view style='flex :3'>未完成</view>
-        <view style='flex :3'>代付款</view>
+      <view class="states">
+        <view style='flex :1' class="underway state">
+        <image  mode="scaleToFill" src="../../icons/underway.png" />
+          <view>进行中</view>
+        </view>
+        <view style='flex :1' class="eva state">
+          <image  mode="scaleToFill" src="../../icons/evaluate.png" />
+          <view>待评价</view>
+        </view>
+        <view style='flex :1' class="finish state">
+          <image   mode="scaleToFill" src="../../icons/finish.png" />
+          <view>已完成</view>
+        </view>
       </view>
     </view>
     <view class="evaluate function">我的评价</view>
